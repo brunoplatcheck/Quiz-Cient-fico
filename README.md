@@ -149,7 +149,7 @@ Este projeto está licenciado sob a **Licença MIT** – consulte o arquivo [LIC
 
 Caso tenha dúvidas, sugestões ou queira contribuir com novos temas:
 
-- ✉️ Email: `seuemail@example.com`
+- ✉️ Email: brunoplatcheck@hotmail.com
 - 💼 LinkedIn: [linkedin.com/in/seuperfil](https://www.linkedin.com/in/bruno-paz-platcheck-06663758/)
 - 🐙 GitHub: [@seuusuario](https://github.com/brunoplatcheck)
 
