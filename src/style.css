@@ -1,0 +1,208 @@
+:root {
+  --cor-primaria: #2E7D32;
+  --cor-secundaria: #00695C;
+  --cor-destaque: #9CCC65;
+  --cor-texto: #E8F5E9;
+  --cor-fundo: #1B5E20;
+  --cor-erro: #C62828;
+  --cor-acerto: #43A047;
+}
+
+body {
+  background: linear-gradient(rgba(0, 50, 30, 0.8), rgba(0, 30, 20, 0.9)), 
+              url('https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Gabarito', sans-serif;
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--cor-texto);
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.logo img {
+  width: 300px;
+  max-width: 80%;
+}
+
+/* Telas */
+.tela-inicio, .conteudo-jogo, .fim {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 20px var(--cor-destaque);
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/* Tela do Quiz */
+.conteudo-jogo {
+  width: 90%;
+}
+
+.questionario {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.info-jogo {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: var(--cor-destaque);
+}
+
+.pergunta {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  margin: 1.5rem 0;
+  display: block;
+}
+
+.respostas {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.botao-resposta {
+  background: var(--cor-primaria);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: 'Gabarito', sans-serif;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.botao-resposta:hover {
+  background: var(--cor-secundaria);
+  transform: translateY(-2px);
+}
+
+/* Tela Final */
+.fim h2 {
+  color: var(--cor-destaque);
+  margin-bottom: 1.5rem;
+}
+
+.resultado {
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.input-nome {
+  margin: 2rem 0;
+}
+
+#nome-jogador {
+  padding: 10px 15px;
+  border-radius: 50px;
+  border: none;
+  width: 70%;
+  max-width: 300px;
+  font-size: 1rem;
+  margin-right: 10px;
+}
+
+.ranking-container {
+  margin: 2rem 0;
+  width: 100%;
+}
+
+.ranking {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 1rem;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.ranking-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Botões */
+.botao {
+  background: var(--cor-primaria);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: 'Gabarito', sans-serif;
+  font-weight: 600;
+  margin: 0.5rem;
+}
+
+.botao:hover {
+  background: var(--cor-destaque);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(156, 204, 101, 0.5);
+}
+
+/* Efeitos para respostas */
+.acerto {
+  background: var(--cor-acerto) !important;
+  animation: pulse 0.5s;
+}
+
+.erro {
+  background: var(--cor-erro) !important;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .respostas {
+    grid-template-columns: 1fr;
+  }
+  
+  .tela-inicio, .conteudo-jogo, .fim {
+    padding: 1rem;
+    width: 90%;
+  }
+  
+  .input-nome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  #nome-jogador {
+    margin-right: 0;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+}
